@@ -1,5 +1,5 @@
 # amdgpu-pro-opencl-installer
-AMD OpenCL installer scripts for Linux. These scripts install AMD's "legacy" (non-ROCm) OpenCL components alongside the open source amdgpu stack. 
+AMD OpenCL installer scripts for Linux. These scripts install AMD's "legacy" (non-ROCm) OpenCL components alongside the open source amdgpu stack. These scripts are adapted for OpenSUSE and Fedora from the 'opencl-amd' Arch Linux package: https://aur.archlinux.org/packages/opencl-amd/. 
 
 **For GPUs older than Polaris (RX 460, RX 470, RX 480):**
 
