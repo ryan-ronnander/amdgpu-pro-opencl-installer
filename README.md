@@ -7,7 +7,7 @@ AMD OpenCL installer scripts for Linux. These scripts install AMD's "legacy" (no
 
 A recent AMD GPU derived from their [GCN architecture](https://en.wikipedia.org/wiki/Graphics_Core_Next) is required. 
 
-This script has been tested against the following 64 bit rpm based distributions: 
+[amdgpu_opencl_install.sh](/amdgpu_opencl_install.sh) has been tested against the following 64 bit rpm based distributions: 
 
  * OpenSUSE Tumbleweed
  * Fedora 27
