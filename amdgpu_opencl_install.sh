@@ -6,9 +6,6 @@
 # 2) removing amdgpu-pro directory remnants 'rm -rf /opt/amdgpu*'
 # 3) reboot
 
-# Install clinfo (built-in opensource clinfo)
-zypper in -y clinfo
-
 # Set packaging variables
 pkgname='opencl-amd'
 prefix='amdgpu-pro-'
@@ -72,8 +69,3 @@ rm -rf "${srcdir}/opencl"
 rm -rf "${srcdir}/libdrm"
 
 # rm -rf ${srcdir} # optional - clean up entire download
-
-# REQUIRED EXPORT TO RUN CLINFO AS NON-ROOT USERS!!!
-# Configuring AMD specific icd will eliminate enumerating intel integrated graphics
-# Export the following variable before running clinfo or other utilities:
-# export OCL_ICD_VENDORS=/etc/OpenCL/vendors/amdocl64.icd
