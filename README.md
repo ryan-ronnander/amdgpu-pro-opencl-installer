@@ -27,11 +27,11 @@ sudo dnf install -y clinfo
 ```
 ### Pre-Polars (RX 460, RX 470, RX 480) GPUs
 
-The 'amdgpu' kernel module is required to run the OpenCL components! If you're using the 'radeon' kernel module (default for 7900 series, 200 series, 300 series GPUs), you will need to blacklist the radeon module and add the following kernel parameters to your grub defaults: 
+The 'amdgpu' kernel module is required to run the OpenCL components! If you're using the 'radeon' kernel module (default for 7900 series, 200 series, 300 series GPUs), you will need to blacklist the radeon module and add the following kernel parameters to your grub defaults in /etc/defaults/grub: 
 ```
 modprobe.blacklist=radeon radeon.si_support=0 radeon.cik_support=0 amdgpu.exp_hw_support=1 amdgpu.si_support=1 amdgpu.cik_support=1
 ```
-For example, if you're using an HD 7870, R9 290X, or R9 390 you will need the above kernel parameters.
+For example, if you're using an HD 7870, R9 290X, or R9 390 you will need the above kernel parameters. Please see [Fedora's documentation on adding kernel parameters to grub](https://docs-old.fedoraproject.org/en-US/Fedora/23/html/Multiboot_Guide/GRUB-configuration.html).
 
 Please note that you do not actually need _all_ of the above parameters depending on your actual hardware setup. 
  
@@ -39,7 +39,7 @@ Kernel version 4.15 or greater recommended.
 
 ## Post Installation
 
-Setting the OCL_ICD_VENDORS environment variable allows running clinfo and other utilities under a non-root context:
+Setting the OCL_ICD_VENDORS environment variable allows running clinfo and other utilities under a non-root context.
 ```shell
 export OCL_ICD_VENDORS=/etc/OpenCL/vendors/
 ```
